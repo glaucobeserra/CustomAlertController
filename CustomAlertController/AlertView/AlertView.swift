@@ -10,6 +10,7 @@ import UIKit
 
 class AlertView: UIView, Modal {
     
+    // MARK: Outlets
     @IBOutlet weak var cardBackgroundView: UIView!
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var alertTitleLabel: UILabel!
@@ -17,9 +18,11 @@ class AlertView: UIView, Modal {
     @IBOutlet weak var alertMessageLabel: UILabel!
     @IBOutlet weak var alertButton: UIButton!
     
+    // MARK: - Properties
     var dialogView = UIView()
     var backgroundView = UIView()
     
+    // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -31,13 +34,13 @@ class AlertView: UIView, Modal {
     convenience init(title: String, message: String) {
         self.init(frame: UIScreen.main.bounds)
         innitialize(title, message)
-        
     }
     
+    // MARK: - Methods
     private func innitialize(_ title: String, _ message: String) {
         createBackgroundView()
-        guard let nibView = Bundle.main.loadNibNamed("AlertView", owner: self, options: nil)?.first as? UIView else { return }
-        dialogView = nibView
+        dialogView = loadNib()
+        
         alertTitleLabel.text = title
         alertMessageLabel.text = message
         cardBackgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTappedOnBackgroundView)))
@@ -53,10 +56,11 @@ class AlertView: UIView, Modal {
         addSubview(backgroundView)
     }
     
-    @objc func didTappedOnBackgroundView(){
+    @objc private func didTappedOnBackgroundView(){
         dismiss(animated: true)
     }
     
+    // MARK: - Actions
     @IBAction func alertAction(_ sender: UIButton) {
         print("Bye!")
         dismiss(animated: true)
