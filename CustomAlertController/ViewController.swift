@@ -12,9 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func showAlert(_ sender: UIButton) {
+        let alert = AlertView(title: "Lorem ipsum error",
+                              message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare quam sit amet sagittis feugiat. ")
+        alert.show(animated: true)
+    }
+    
 }
 

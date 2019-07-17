@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7831A17F22DF699C0055DF24 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7831A17E22DF699C0055DF24 /* UIView+Extension.swift */; };
 		788197FF22DE1815002C2BEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788197FE22DE1815002C2BEC /* AppDelegate.swift */; };
 		7881980122DE1815002C2BEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7881980022DE1815002C2BEC /* ViewController.swift */; };
 		7881980422DE1815002C2BEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7881980222DE1815002C2BEC /* Main.storyboard */; };
 		7881980622DE1817002C2BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7881980522DE1817002C2BEC /* Assets.xcassets */; };
 		7881980922DE1817002C2BEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7881980722DE1817002C2BEC /* LaunchScreen.storyboard */; };
+		7881981722DE3284002C2BEC /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7881981622DE3284002C2BEC /* AlertView.xib */; };
+		7881981922DE38FB002C2BEC /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7881981822DE38FB002C2BEC /* AlertView.swift */; };
+		78A61A9322DE4C0B00DD8F3B /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A61A9222DE4C0B00DD8F3B /* Modal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7831A17E22DF699C0055DF24 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		788197FB22DE1815002C2BEC /* CustomAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		788197FE22DE1815002C2BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7881980022DE1815002C2BEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		7881980522DE1817002C2BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7881980822DE1817002C2BEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7881980A22DE1817002C2BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7881981622DE3284002C2BEC /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		7881981822DE38FB002C2BEC /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		78A61A9222DE4C0B00DD8F3B /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7831A18022DF88E60055DF24 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				7881981622DE3284002C2BEC /* AlertView.xib */,
+				7881981822DE38FB002C2BEC /* AlertView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		7831A18122DF88F80055DF24 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78A61A9222DE4C0B00DD8F3B /* Modal.swift */,
+				7831A17E22DF699C0055DF24 /* UIView+Extension.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7831A18222DF89540055DF24 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				788197FE22DE1815002C2BEC /* AppDelegate.swift */,
+				7881980722DE1817002C2BEC /* LaunchScreen.storyboard */,
+				7881980A22DE1817002C2BEC /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		788197F222DE1815002C2BEC = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +90,12 @@
 		788197FD22DE1815002C2BEC /* CustomAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				788197FE22DE1815002C2BEC /* AppDelegate.swift */,
 				7881980022DE1815002C2BEC /* ViewController.swift */,
 				7881980222DE1815002C2BEC /* Main.storyboard */,
 				7881980522DE1817002C2BEC /* Assets.xcassets */,
-				7881980722DE1817002C2BEC /* LaunchScreen.storyboard */,
-				7881980A22DE1817002C2BEC /* Info.plist */,
+				7831A18022DF88E60055DF24 /* AlertView */,
+				7831A18122DF88F80055DF24 /* Resources */,
+				7831A18222DF89540055DF24 /* SupportFiles */,
 			);
 			path = CustomAlertController;
 			sourceTree = "<group>";
@@ -123,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7881980922DE1817002C2BEC /* LaunchScreen.storyboard in Resources */,
+				7881981722DE3284002C2BEC /* AlertView.xib in Resources */,
 				7881980622DE1817002C2BEC /* Assets.xcassets in Resources */,
 				7881980422DE1815002C2BEC /* Main.storyboard in Resources */,
 			);
@@ -135,7 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7881981922DE38FB002C2BEC /* AlertView.swift in Sources */,
+				78A61A9322DE4C0B00DD8F3B /* Modal.swift in Sources */,
 				7881980122DE1815002C2BEC /* ViewController.swift in Sources */,
+				7831A17F22DF699C0055DF24 /* UIView+Extension.swift in Sources */,
 				788197FF22DE1815002C2BEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +324,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG955U3U64;
-				INFOPLIST_FILE = CustomAlertController/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CustomAlertController/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +343,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG955U3U64;
-				INFOPLIST_FILE = CustomAlertController/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CustomAlertController/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
